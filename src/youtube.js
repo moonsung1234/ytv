@@ -16,7 +16,7 @@ let {
  * @property {string} date - youtube video upload date
  * @returns {link2info}
  */
-export async function get_link2info(link) {
+async function get_link2info(link) {
   if(!is_url(link)) {
       return new URIError("The Link Format is Incorrect!");
   }
@@ -55,7 +55,7 @@ export async function get_link2info(link) {
  * @property {string} video_length - youtube video length
  * @returns {title2info}
  */
-export async function get_title2info(title) {
+async function get_title2info(title) {
   return new Promise((resolve, reject) => {
     axios.get(SEARCH_LINK + encodeURI(title))
     .then(res => {
@@ -79,4 +79,9 @@ export async function get_title2info(title) {
       reject(err);
     });
   });
+}
+
+module.exports = {
+  get_link2info,
+  get_title2info
 }

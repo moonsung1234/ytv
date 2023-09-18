@@ -2,14 +2,14 @@
  * @readonly
  * @const {string} 
  */
-export const SEARCH_LINK = "https://www.youtube.com/results?search_query=";
+const SEARCH_LINK = "https://www.youtube.com/results?search_query=";
 
 /**
  * 
  * @param {string} url youtube url
  * @returns {boolean} boolean
  */
-export let is_url = (url) => {
+let is_url = (url) => {
     let url_regex = /^(?:(?:https?:)?\/\/)?(?:www\.)?(?:m\.)?(?:youtu(?:be)?\.com\/(?:v\/|embed\/|watch(?:\/|\?v=))|youtu\.be\/)((?:\w|-){11})(?:\S+)?$/;
 
     return !!String(url).match(url_regex);
@@ -19,7 +19,7 @@ export let is_url = (url) => {
  * @param {Object} obj flatten target object
  * @returns {Object} flatten object
  */
-export let flatten_object = (obj) => {
+let flatten_object = (obj) => {
   const result = {}
 
   function recurse(tab, current, prop) {
@@ -48,4 +48,10 @@ export let flatten_object = (obj) => {
   recurse(0, obj, '');
 
   return result
+}
+
+module.exports = {
+  SEARCH_LINK,
+  is_url,
+  flatten_object
 }
