@@ -9,10 +9,10 @@ node.js module to Manage Youtube Video Information
 ```javascript
 // example/index.js
 
-import { get_info } from "ytv";
+let ytv = require("ytv");
 
 // any youtube video link
-get_info("https://www.youtube.com/watch?v=HWR8Aw5htvE&t=59s&pp=ygUJ6rCQ7Iqk7Yq4")
+ytv.get_info("https://www.youtube.com/watch?v=HWR8Aw5htvE&t=59s&pp=ygUJ6rCQ7Iqk7Yq4")
 .then(info => console.log(info));
 ```
 

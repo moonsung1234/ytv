@@ -1,10 +1,10 @@
 
-import axios from "axios";
-import { 
+let axios = require("axios");
+let { 
   SEARCH_LINK, 
   is_url, 
   flatten_object 
-} from "./env.js";
+} = require("./env");
 
 /**
  * 
