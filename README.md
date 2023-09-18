@@ -1,6 +1,8 @@
 # ytv
 node.js module to Manage Youtube Video Information  
 
+    npm install ptv
+
 <br>
 
 # example
